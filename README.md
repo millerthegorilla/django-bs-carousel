@@ -1,4 +1,4 @@
-# dango_bs_carousel
+# dango-bs-carousel
 A bootstrap carousel with asynchronous image loading using javascript webworkers.  Because images are loaded asychronously, your user can continue to interact with the site.
 
 ## installation

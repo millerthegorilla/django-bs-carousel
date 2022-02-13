@@ -1,1 +1,1 @@
-django-bs-carousel
+django_bs_carousel
