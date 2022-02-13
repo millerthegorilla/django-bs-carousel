@@ -12,14 +12,7 @@ django-bs-carousel/tests.py
 django-bs-carousel/urls.py
 django-bs-carousel/views.py
 django-bs-carousel/migrations/__init__.py
-django-bs-carousel/migrations/__pycache__/__init__.cpython-310.pyc
-django-bs-carousel/static/django-bs-carousel/css/styles.css
-django-bs-carousel/static/django-bs-carousel/images/spinning-circles.svg
-django-bs-carousel/static/django-bs-carousel/js/carousel.js
-django-bs-carousel/static/django-bs-carousel/js/imageLoader.js
-django-bs-carousel/templates/django-bs-carousel/carousel.html
 django_bs_carousel.egg-info/PKG-INFO
 django_bs_carousel.egg-info/SOURCES.txt
 django_bs_carousel.egg-info/dependency_links.txt
-django_bs_carousel.egg-info/requires.txt
 django_bs_carousel.egg-info/top_level.txt

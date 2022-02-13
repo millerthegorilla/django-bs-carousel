@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views as lazyload_views
 
-app_name = "django-bs-carousel"
+app_name = "django_bs_carousel"
 
 urlpatterns = [
 	path('imgurl/<str:webp_support>/<str:screen_size>/<int:iteration>/<str:pks>/<str:indexes>', 

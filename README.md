@@ -5,8 +5,8 @@ A bootstrap carousel with asynchronous image loading using javascript webworkers
 to be confirmed
 
 ## usage
-add `django-bs-carousel` to your installed apps section of your settings.py.
-add `{% include 'django-bs-carousel/carousel.html' %} to the template that will display the carousel.
+add `django_bs_carousel` to your installed apps section of your settings.py.
+add `{% include 'django_bs_carousel/carousel.html' %} to the template that will display the carousel.
 In your settings.py file add the following...
 ```
 IMAGE_SIZE_LARGE = "1024x768"
@@ -34,7 +34,7 @@ In the view that is associated with the template that displays the carousel, pla
         context['randomize_images'] = conf.settings.CAROUSEL_RANDOMIZE_IMAGES
         context['use_cache'] = conf.settings.CAROUSEL_USE_CACHE
         context['offset'] = conf.settings.CAROUSEL_OFFSET
-        context['loading_image'] = 'django-bs-carousel/images/spinning-circles.svg'
+        context['loading_image'] = 'django_bs_carousel/images/spinning-circles.svg'
         context['image_size_large'] = conf.settings.IMAGE_SIZE_LARGE
         context['image_size_small'] = conf.settings.IMAGE_SIZE_SMALL
         context['images_per_request'] = conf.settings.NUM_IMAGES_PER_REQUEST
@@ -74,7 +74,7 @@ If you want to use a custom template, then simply copy the following into a new 
       {% endif %}
     </div>
     {% block body_js %}
-      <script src="{% static 'django-bs-carousel/js/carousel.js' %}" type="application/javascript" referrerpolicy="origin" defer=""></script>
+      <script src="{% static 'django_bs_carousel/js/carousel.js' %}" type="application/javascript" referrerpolicy="origin" defer=""></script>
     {% endblock body_js %}
 ```
 Note that your base.html template can have a `{% block body_js %} {% endblock body_js %}` at the end of your content, so that the javascript 'carousel.js' can be loaded properly.  Also, you can change image.caption for any text field etc. rather than being bound to placing a field named 'caption' on your images model.
@@ -85,7 +85,7 @@ The following options in your settings.py file control the way the carousel work
 ### CAROUSEL_RANDOMIZE_IMAGES = False
 This randomizes the presentation of the images
 ### CAROUSEL_USE_CACHE = False
-If this is True, then the webworker will make a request to a view function on django-bs-carousel.  You will need to have sorl-thumbnail and PIL installed using pip.  The view function uses sorl-thumbnail to create two image thumbnails, one large and one small, at the sizes you set using the two options below, image_size_large and image_size_small.  These two image sizes are ideals for the presentation of images to either a desktop or a mobile.  The thumbnail operation converts it to webp, if the browser supports this, and then caches the images, so that they can be recovered later.  The webworker then loads the images asynchronously.  So, if you use the cache you can get webp images, which will offer the quality of webp to the user.  If you do not use the cache the images are loaded as they are found on the image file on your model.  You can change all the images to a particular format and size when they are uploaded.  Note that even if you set useCache to false, the browser will cache the webworker's loaded file, so as long as the user does not clear their browser cache they will get cached image loading.
+If this is True, then the webworker will make a request to a view function on django_bs_carousel.  You will need to have sorl-thumbnail and PIL installed using pip.  The view function uses sorl-thumbnail to create two image thumbnails, one large and one small, at the sizes you set using the two options below, image_size_large and image_size_small.  These two image sizes are ideals for the presentation of images to either a desktop or a mobile.  The thumbnail operation converts it to webp, if the browser supports this, and then caches the images, so that they can be recovered later.  The webworker then loads the images asynchronously.  So, if you use the cache you can get webp images, which will offer the quality of webp to the user.  If you do not use the cache the images are loaded as they are found on the image file on your model.  You can change all the images to a particular format and size when they are uploaded.  Note that even if you set useCache to false, the browser will cache the webworker's loaded file, so as long as the user does not clear their browser cache they will get cached image loading.
 ### IMAGE_SIZE_LARGE = "1024x768"
 The large size of image if useCache is set to True.
 ### IMAGE_SIZE_SMALL = "360x640"

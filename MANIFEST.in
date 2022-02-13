@@ -1,4 +1,4 @@
 include LICENSE
 include README.md
-recursive-include django-bs-carousel/*
+recursive-include django_bs_carousel/*
 recursive-include docs *
