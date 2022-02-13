@@ -77,7 +77,7 @@ If you want to use a custom template, then simply copy the following into a new 
       <script src="{% static 'django-bs-carousel/js/carousel.js' %}" type="application/javascript" referrerpolicy="origin" defer=""></script>
     {% endblock body_js %}
 ```
-Note that your base.html template can have a `{% block body_js %} {% endblock body_js %}` at the end of your content, so that the javascript 'carousel.js' can be loaded properly.
+Note that your base.html template can have a `{% block body_js %} {% endblock body_js %}` at the end of your content, so that the javascript 'carousel.js' can be loaded properly.  Also, you can change image.caption for any text field etc. rather than being bound to placing a field named 'caption' on your images model.
 
 ## options
 The following options in your settings.py file control the way the carousel works.
