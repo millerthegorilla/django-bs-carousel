@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+django-bs-carousel/django_bs_carousel.egg-info/PKG-INFO
+django-bs-carousel/django_bs_carousel.egg-info/SOURCES.txt
+django-bs-carousel/django_bs_carousel.egg-info/dependency_links.txt
+django-bs-carousel/django_bs_carousel.egg-info/top_level.txt
+django-bs-carousel/migrations/__init__.py
+django-bs-carousel/migrations/__pycache__/__init__.cpython-310.pyc
+django-bs-carousel/static/django-bs-carousel/css/styles.css
+django-bs-carousel/static/django-bs-carousel/images/spinning-circles.svg
+django-bs-carousel/static/django-bs-carousel/js/carousel.js
+django-bs-carousel/static/django-bs-carousel/js/imageLoader.js
+django-bs-carousel/templates/django-bs-carousel/carousel.html
