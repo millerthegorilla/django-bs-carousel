@@ -1,12 +1,10 @@
 include LICENSE
 include README.md
-recursive-include django_bs_carousel/*
-recursive-include django_bs_carousel/templates/*
-recursive-include django_bs_carousel/templates/django_bs_carousel/*
-recursive-include django_bs-carousel/static/*
-recursive-include django_bs-carousel/static/django_bs-carousel/*
-recursive-include django_bs-carousel/static/django_bs-carousel/css/*
-recursive-include django_bs-carousel/static/django_bs-carousel/js/*
-recursive-include django_bs_carousel/migrations/*
-recursive-include django_bs-carousel/static/django_bs-carousel/images/*
-recursive-include docs *
+include django_bs_carousel/*
+include django_bs_carousel/templates/django_bs_carousel/carousel.html
+include django_bs_carousel/static/django_bs_carousel/js/carousel.js
+include django_bs_carousel/static/django_bs_carousel/js/imageLoader.js
+include django_bs_carousel/static/django_bs_carousel/css/styles.css
+include django_bs_carousel/static/django_bs_carousel/images/spinning-circles.svg
+include django_bs_carousel/migrations/*
+include docs/*
