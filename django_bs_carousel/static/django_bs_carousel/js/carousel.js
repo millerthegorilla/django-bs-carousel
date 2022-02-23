@@ -159,8 +159,11 @@ var Singleton = (function(){
         var list = document.querySelector('.carousel-inner'), i;
         if(rand)
         {
-            for (i = list.children.length; i >= 0; i--) {
-                list.appendChild(list.children[Math.random() * i | 0]);
+            if(list.children.length)
+            {
+                for (i = list.children.length; i >= 0; i--) {
+                    list.appendChild(list.children[Math.random() * i | 0]);
+                }
             }
         }
         this.nodeList = list.children;
