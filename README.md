@@ -101,4 +101,9 @@ This loads the first image immediately.  Even when it is set it is replaced with
 This is the image model which must have a field called 'file' which is the image file.  The image model must have an autoincrement pk integer field named 'pk'.
 The string value is the app name, and then the model from models.py or similar.
 
+## CSP (content-security-protection)
+The images are loaded into blobs before they are displayed.  If you have a CSP defined for img-src, then you will need to add 'blob:':
+```
+img-src 'self' blob: https://*mysite.com
+```
 Enjoy!
