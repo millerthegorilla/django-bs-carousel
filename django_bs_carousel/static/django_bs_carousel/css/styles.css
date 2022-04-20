@@ -22,20 +22,29 @@
   visibility: hidden;
   opacity: 0;
   transition: all 2s ease-out;
-  width: fit-content;
+  margin-left: 10vw;
+  max-width: 80vw;
+  overflow-x: clip;
 }
 
 .carousel-image {
-  display: flex;
-  position: relative;
-  align-self: center;
   object-fit: contain;
-  height: 87vh;
-  width:100%;
+  height: 85vh;
+  width: 100%;
   margin: auto;
+  margin-top: 2vh;
 }
 
-.carousel-image:hover + .carousel-caption {
+#hover-div {
+  position: absolute;
+  z-index: 10;
+  top: 25%;
+  left:  25%;
+  width: 40%;
+  height: 40%;
+}
+
+#hover-div:hover + .carousel-inner > .carousel-item > .carousel-caption {
   visibility: visible;
   opacity: 1;
   transition: all 1s ease-in;
